@@ -1,0 +1,196 @@
+/* === RESET E BASE === */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 48, 48);
+}
+
+/* === NAVBAR === */
+.NavBar {
+    background-color: rgb(127, 36, 180);
+    display: flex;
+    flex-wrap: nowrap; /* evitar quebra */
+    justify-content: space-between; /* empurra para as pontas */
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.NavBar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    line-height: 1.4;
+    overflow: visible;
+    vertical-align: middle;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.NavBar a:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+}
+
+
+
+/* === ÁREAS CENTRAIS === */
+.anuncio,
+.top_area,
+.fundo_area {
+    background-color: rgb(130, 56, 148);
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.anuncio {
+    background-color: rgb(119, 119, 119);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.top_area {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.fundo_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fundo_area > div {
+    flex: 1 1 300px;
+    min-width: 280px;
+}
+
+/* === CAMPOS DE TEXTO === */
+
+.nomeDaMusica,
+.nomeDaAnot {
+  background-color: aliceblue;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  height: 40px;
+  width: 100%;
+}
+
+.local_text,
+.local_anotar {
+  background-color: aliceblue;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  height: 300px;
+  width: 100%;
+  resize: vertical;
+  text-align: left;
+}
+
+.nomeDaMusicaLabel,
+.nomeDaAnotLabel {
+  color: white;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+/* === FOOTER === */
+.footer {
+    background-color: rgb(127, 36, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    color: white;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .NavBar {
+        flex-direction: column;
+        justify-content: center; /* para centralizar em mobile */
+        gap: 5px;
+    }
+
+    .logo,
+    .lg_rg {
+        margin: 0;
+    }
+
+    .top_area {
+        font-size: 1.2rem;
+    }
+
+    .fundo_area {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nomeDaMusica,
+    .local_text,
+    .nomeDaAnot,
+    .local_anotar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .top_area {
+        font-size: 1rem;
+    }
+
+    .NavBar a {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+.baixar-btn {
+  background-color: rgb(127, 36, 180);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.baixar-btn:hover {
+  background-color: rgb(97, 26, 150);
+}
